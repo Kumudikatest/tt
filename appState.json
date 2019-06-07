@@ -1,66 +1,83 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "6bdbe5b4-7833-4940-af1b-2810c52f1ad1": {
-        "id": "6bdbe5b4-7833-4940-af1b-2810c52f1ad1",
+      "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93": {
+        "id": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
         "parent": null,
         "name": "tt",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "edf17039-20b1-4a36-b7d5-642f6114e1af"
+          "bf7b5a81-d412-4b54-89d1-5ad67685acd7"
         ],
         "isRemovable": false,
         "filePath": "tt"
       },
-      "edf17039-20b1-4a36-b7d5-642f6114e1af": {
-        "id": "edf17039-20b1-4a36-b7d5-642f6114e1af",
-        "parent": "6bdbe5b4-7833-4940-af1b-2810c52f1ad1",
-        "name": "lambda.js",
-        "type": "LAMBDA_FILE",
+      "bf7b5a81-d412-4b54-89d1-5ad67685acd7": {
+        "id": "bf7b5a81-d412-4b54-89d1-5ad67685acd7",
+        "parent": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
         "isDirectory": false,
         "children": [],
         "isRemovable": true,
-        "filePath": "tt/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
-        "triggers": [],
+        "filePath": "tt/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs8",
           "timeout": 60,
-          "memory": 128
-        }
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "a540dee3-391c-4a97-9ed2-209848f7404e": {
+        "id": "a540dee3-391c-4a97-9ed2-209848f7404e",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.ttfunction = require(\"./tt/function.js\").handler;"
       }
     },
     "deletedFiles": [],
-    "rootNode": "6bdbe5b4-7833-4940-af1b-2810c52f1ad1",
+    "rootNode": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
     "openFiles": [
-      "edf17039-20b1-4a36-b7d5-642f6114e1af"
+      "bf7b5a81-d412-4b54-89d1-5ad67685acd7"
     ],
-    "currentFileId": "edf17039-20b1-4a36-b7d5-642f6114e1af",
-    "resources": {},
-    "envVariables": [
-      {
-        "lambdaId": "all",
-        "varKey": "SIGMA_AWS_ACC_ID",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
+    "currentFileId": "bf7b5a81-d412-4b54-89d1-5ad67685acd7",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
       }
-    ],
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [],
     "packageJSON": {
       "dependencies": {}
-    },
-    "lambdaId": "edf17039-20b1-4a36-b7d5-642f6114e1af"
+    }
   },
   "PROJECT_META": {
     "projectName": "tt",
     "projectDescription": "",
     "projectVersion": "1.0.0",
-    "projectRegion": "us-east-1",
-    "platform": "AWS",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
     "platformRegions": {},
-    "lastSave": 1548679738316
+    "lastSave": 1559888284292
   },
   "VCS_STATE": {
     "provider": "GitHub",
