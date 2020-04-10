@@ -1,33 +1,25 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93": {
-        "id": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
+      "26d1231e-0805-4122-98d8-c98ae93ea111": {
+        "id": "26d1231e-0805-4122-98d8-c98ae93ea111",
         "parent": null,
-        "name": "tt",
-        "type": "DIRECTORY",
-        "isDirectory": true,
-        "children": [
-          "bf7b5a81-d412-4b54-89d1-5ad67685acd7"
-        ],
-        "isRemovable": false,
-        "filePath": "tt"
-      },
-      "bf7b5a81-d412-4b54-89d1-5ad67685acd7": {
-        "id": "bf7b5a81-d412-4b54-89d1-5ad67685acd7",
-        "parent": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
-        "name": "function.js",
+        "name": "tt.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
         "children": [],
         "isRemovable": true,
-        "filePath": "tt/function.js",
-        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "filePath": "tt.js",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
         "config": {
           "runtime": "nodejs8",
           "timeout": 60,
           "memory": 128,
-          "triggerType": 0
+          "triggerType": 0,
+          "name": "tt"
         },
         "triggers": [
           {
@@ -36,24 +28,31 @@
           }
         ]
       },
-      "a540dee3-391c-4a97-9ed2-209848f7404e": {
-        "id": "a540dee3-391c-4a97-9ed2-209848f7404e",
+      "036467f1-f67d-4f63-a3d5-bdeb364e9f49": {
+        "id": "036467f1-f67d-4f63-a3d5-bdeb364e9f49",
         "parent": null,
         "name": "index.js",
         "type": "JS_FILE",
         "isDirectory": false,
         "children": [],
         "isRemovable": false,
-        "filePath": "index.js",
-        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.ttfunction = require(\"./tt/function.js\").handler;"
+        "filePath": "index.js"
+      },
+      "23877e64-294c-4b6d-a962-f2325404edc9": {
+        "id": "23877e64-294c-4b6d-a962-f2325404edc9",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py"
       }
     },
-    "deletedFiles": [],
-    "rootNode": "542ff4b3-b5b9-4c82-8b4b-d59d9f615c93",
     "openFiles": [
-      "bf7b5a81-d412-4b54-89d1-5ad67685acd7"
+      "26d1231e-0805-4122-98d8-c98ae93ea111"
     ],
-    "currentFileId": "bf7b5a81-d412-4b54-89d1-5ad67685acd7",
+    "currentFileId": "26d1231e-0805-4122-98d8-c98ae93ea111",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
@@ -62,8 +61,9 @@
       }
     },
     "customTemplate": {
+      "overrideDefault": false,
       "dialect": null,
-      "definitions": {}
+      "definitions": null
     },
     "envVariables": [],
     "packageJSON": {
@@ -74,10 +74,11 @@
     "projectName": "tt",
     "projectDescription": "",
     "projectVersion": "1.0.0",
-    "projectRegion": "us-east1",
+    "projectRegion": "europe-west2",
     "platform": "GCP",
+    "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1559888284292
+    "lastSave": 1586498105592
   },
   "VCS_STATE": {
     "provider": "GitHub",
